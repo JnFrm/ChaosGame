@@ -31,32 +31,31 @@ yP = [0,0,1]
 
 
 
-StartPunkt = [0.5, 1]
-Punkt = StartPunkt
+StartingPoint = [0.5, 1]
+Point = StartingPoint
 
 Iterations = int(input("How many iterations ?"))
 
 
-xGesamt = []
-yGesamt = []
+xTotal = []
+yTotal = []
 
 for i in range(Iterations):
     #j =  rd.randrange(0, 2, 1)
     j = rd.randint(0,2)
 
-    xPunkt = xP[j]
-    yPunkt = yP[j]
-    xVorPunkt = Punkt[0]
-    yVorPunkt = Punkt[1]
-    xneu = (xPunkt + xVorPunkt)/2
-    yneu = (yPunkt + yVorPunkt)/2
-    Punkt = [xneu,yneu]
-    xGesamt.append(xneu)
-    yGesamt.append(yneu)
-    #print("Punkt = ", Punkt)
+    xPoint = xP[j]
+    yPoint = yP[j]
+    xPre = Point[0]
+    yPre = Point[1]
+    xNew = (xPoint + xPre)/2
+    yneu = (yPunkt + yPre)/2
+    Point = [xNew,yNew]
+    xTotal.append(xNew)
+    yTotal.append(yNew)
 
 
-plt.scatter(xGesamt, yGesamt, s = .01)
+plt.scatter(xTotal, yTotal, s = .01)
 plt.xlim(0,2)
 plt.ylim(0,2)
 plt.show()
