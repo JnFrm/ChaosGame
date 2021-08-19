@@ -21,27 +21,32 @@ import matplotlib.pyplot as plt
 import random as rd
 
 
-A = [0,0]
-B = [2,0]
-C = [1,1]
+#x- and y-coordinates of three points that define our playground. [0, 0], [2, 0], [1, 1] respectively.
 
 xP = [0,2,1]
 yP = [0,0,1]
 
 
 
+# Starting point
 
-StartingPoint = [0.5, 1]
-Point = StartingPoint
+Point = [0.5, 1]
+
+
+#Self explanatory
 
 Iterations = int(input("How many iterations ?"))
 
 
+#List of x- and y-coordinates of the calculated points
+
 xTotal = []
 yTotal = []
 
+
 for i in range(Iterations):
-    #j =  rd.randrange(0, 2, 1)
+    
+    #chooses out target point at random
     j = rd.randint(0,2)
 
     xPoint = xP[j]
@@ -54,7 +59,7 @@ for i in range(Iterations):
     xTotal.append(xNew)
     yTotal.append(yNew)
 
-
+#plots the the calculated pairs
 plt.scatter(xTotal, yTotal, s = .01)
 plt.xlim(0,2)
 plt.ylim(0,2)
