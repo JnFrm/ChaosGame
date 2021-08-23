@@ -54,7 +54,7 @@ for i in range(Iterations):
     xPre = Point[0]
     yPre = Point[1]
     xNew = (xPoint + xPre)/2
-    yneu = (yPunkt + yPre)/2
+    yNew = (yPunkt + yPre)/2
     Point = [xNew,yNew]
     xTotal.append(xNew)
     yTotal.append(yNew)
